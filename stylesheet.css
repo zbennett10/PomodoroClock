@@ -1,0 +1,265 @@
+body {
+  background-image: url(http://i1320.photobucket.com/albums/u521/zbennett10/wood-texture-wallpaper-1_zpszsoqtkor.jpg);
+}
+
+#pomnumbers {
+height: 58px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  font-weight: bold;
+  font-family: montserrat;
+  margin-right: auto;
+  background-color:;
+  line-height:;
+  margin-top: 25px;
+  font-size: 40px;
+}
+
+#display {
+  height: 50px;
+  width: 50px;
+  background-color: ;
+  font-weight: bold;
+  font-family: montserrat;
+  color: ;
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 3px;
+  text-align: center;
+}
+
+
+#displaymin {
+  color: black;
+  height: 50px;
+  width: 50px;
+  background-color: ;
+  font-weight: bold;
+  font-family: montserrat;
+  display: inline-block;
+  font-size: 50px;
+  margin-left: 34px;
+  text-align: center;
+  
+}
+
+#breaknumbers {
+  height: 58px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-family: montserrat;
+  background-color: ;
+  margin-top: 25px;
+  font-size: 40px;
+}
+
+#breaksecdisplay {
+  height: 50px;
+  width: 50px;
+  background-color: ;
+  color: black;
+  font-weight: bold;
+  font-family: montserrat;
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 7px;
+  text-align: center;
+  
+}
+
+#breakmindisplay {
+  height: 50px;
+  width: 50px;
+  background-color:;
+  color: black;
+  font-weight: bold;
+  font-family: montserrat;
+  display:inline-block;
+  font-size: 50px;
+  margin-left: 34px;
+  text-align: center;
+}
+
+#startandstop {
+  height: 58px;
+  width: 190px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: ;
+}
+
+#timerstart {
+  width: 50px;
+  height: 50px;
+  background-color: lawngreen;
+  border-radius: 75%;
+  border: 5px solid black;
+  display: inline-block;
+}
+
+#timerstart:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+#timerpause {
+  width: 50px;
+  height: 50px;
+  background-color: #FBEC5D;
+  border-radius: 75%;
+  border: 5px solid black;
+  display: inline-block;
+}
+
+#timerpause:hover {
+  background-color: gold;
+  cursor: pointer;
+}
+
+#timerstop {
+  width: 50px;
+  height: 50px;
+  background-color: #FF3030;
+  display: inline-block;
+  border-radius: 75%;
+  border: 5px solid black;
+}
+
+#timerstop:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+
+#limitadd {
+  
+ background-color: ;
+  width: 50px;
+  height: 50px; 
+ border-radius: 75%;
+   border: 5px solid teal;
+  color: coral;
+  font-family: montserrat;
+  line-height: 1.5;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#limitadd:hover {
+  cursor: pointer;
+  border-color: navy;
+}
+
+#limitsubtract {
+  background-image: url();
+ background-color: ;
+  width: 50px;
+  height: 50px;
+  line-height: 1.4;
+  border-radius: 75%;
+  border: 5px solid teal;
+  color: coral;
+  font-family: montserrat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  }
+
+#limitsubtract:hover {
+  cursor: pointer;
+  border-color: navy;
+}
+
+#breaklimitholder {
+  height: 220px;
+  width: 220px;
+  display: block;
+  float: left;
+  background-color:;
+  text-align: center;
+  font-size: 35px;
+  font-family: Lobster;
+  color: coral;
+
+}
+
+#breakadd {
+  background-image: url();
+ background-color: ;
+  width: 50px;
+  height: 50px;
+  border-radius: 75%;
+  border: 5px solid teal;
+  color: coral;
+  line-height: 1.5;
+  font-family: montserrat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#breakadd:hover {
+  cursor: pointer;
+  border-color: navy;
+}
+
+#breaksubtract {
+  background-image: url();
+ background-color: ;
+  width: 50px;
+  height: 50px;
+  border-radius: 75%;
+  border: 5px solid teal;
+  color: coral;
+  line-height: 1.4;
+  font-family: montserrat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#breaksubtract:hover {
+  cursor: pointer;
+  border-color: navy;
+}
+
+#breakdisplay {
+  background-color: ;
+  width: 50px;
+  height: 50px;
+  color: coral;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+
+#limitholder {
+  height: 220px;
+  width: 220px;
+  display: block;
+  background-color:;
+  float: right;
+   text-align: center;
+  font-size: 35px;
+  font-family: Lobster;
+  color: coral;
+}
+
+#limitdisplay {
+  background-color: ;
+  width: 50px;
+  height: 50px;
+  color: coral;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
