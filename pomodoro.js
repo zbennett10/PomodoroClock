@@ -1,4 +1,5 @@
 $(document).ready(function() {
+//globals -----------------------------------------------------
   var display = $("#display");
   var displaymin = $("#displaymin");
   var limit = 0;
@@ -15,12 +16,72 @@ $(document).ready(function() {
   var breakminutes = 0;
   var breakseconds = 0;
   var breaksecdisplay = $("#breaksecdisplay");
-  var breakmindisplay = 
-      $("#breakmindisplay");
- //display.text(0);
-  //displaymin.text(0);
-  //breaksecdisplay.text(0);
-  //breakmindisplay.text(0);
+  var breakmindisplay = $("#breakmindisplay");
+  var breaktimerint;
+  var pomtimerint;
+  var pomodorotimer;
+  
+  //helper functions ------------------------------------------------------------
+  //plays alarm sound
+  var alarm = function() {
+		document.getElementById( 'alarmsound' ).play();
+	};
+  
+ //timer for the break period
+ var breaktimer = function() {
+     breaktimerint = setInterval(function() {
+      if (breakseconds < 60) {
+        breakmindisplay.text(breakminutes);
+        breaksecdisplay.text(breakseconds++);
+      } else {
+          breakseconds = 0;
+          //seconds++
+          breakminutes++;
+      breakmindisplay.text(breakminutes);
+          if (breakminutes == breaklimit) {
+            alarm();
+           clearInterval(breaktimerint);
+              breaksecdisplay.text(0);
+            breakmindisplay.text(0);
+            breakminutes = 0;
+            breakseconds = 0;
+            pomodorotimer();
+           }
+      }
+      
+    }, 1000);
+    
+  }
+  
+ //pomodoro timer
+ pomodorotimer = function () {
+     pomtimerint = setInterval(function() {
+      if (seconds < 60) {
+        displaymin.text(minutes);
+        display.text(seconds++);
+      } else {
+          seconds = 0;
+          //seconds++
+          minutes++;
+      displaymin.text(minutes);
+          if (minutes == limit) {
+            //play sound here
+            alarm();
+            //
+           clearInterval(pomtimerint);
+            display.text(0);
+            displaymin.text(0);
+            minutes = 0;
+            seconds = 0;
+            breaktimer();
+           }
+      }
+      
+    }, 1000);
+  }
+  
+ 
+ //user induced event handlers ----------------------------------------------
   
   limitadd.click(function() {
     if (limit < 50) {
@@ -51,66 +112,6 @@ $(document).ready(function() {
     breakdisplay.text(breaklimit);
     } else {}
   });
-  
-var breaktimerint;
-var pomtimerint;
-var pomodorotimer;
-  
-  var alarm = function() {
-		document.getElementById( 'alarmsound' ).play();
-	};
-  
- var breaktimer = function() {
-     breaktimerint = setInterval(function() {
-      if (breakseconds < 60) {
-        breakmindisplay.text(breakminutes);
-        breaksecdisplay.text(breakseconds++);
-      } else {
-          breakseconds = 0;
-          //seconds++
-          breakminutes++;
-      breakmindisplay.text(breakminutes);
-          if (breakminutes == breaklimit) {
-            alarm();
-           clearInterval(breaktimerint);
-              breaksecdisplay.text(0);
-            breakmindisplay.text(0);
-            breakminutes = 0;
-            breakseconds = 0;
-            pomodorotimer();
-           }
-      }
-      
-    }, 1000);
-    
-  }
-  
- pomodorotimer = function () {
-     pomtimerint = setInterval(function() {
-      if (seconds < 60) {
-        displaymin.text(minutes);
-        display.text(seconds++);
-      } else {
-          seconds = 0;
-          //seconds++
-          minutes++;
-      displaymin.text(minutes);
-          if (minutes == limit) {
-            //play sound here
-            alarm();
-            //
-           clearInterval(pomtimerint);
-            display.text(0);
-            displaymin.text(0);
-            minutes = 0;
-            seconds = 0;
-            breaktimer();
-           }
-      }
-      
-    }, 1000);
-  }
-  
  
   
   $("#timerstart").click(function() {
